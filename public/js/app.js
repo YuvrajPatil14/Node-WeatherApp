@@ -3,8 +3,14 @@
 console.log('client side js is loded');
 
 async function getData (city){
+
+    msg1.textContent = "Loading...";
+    msg2.textContent = '';
     const response = await fetch('/weather?city='+city);
     const data = await response.json();
+
+    msg1.textContent = '';
+
     return data;
 }
 
@@ -20,7 +26,8 @@ weatherForm.addEventListener('submit',async (e)=>{
 e.preventDefault();
 const city = search.value
 const data = await getData(city)
-console.log(data);
+
+//console.log(data);
 if(data.error)
 {
     msg1.textContent = data.error + "Try again!!";
