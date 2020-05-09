@@ -5,6 +5,7 @@ const getData = require('./utils/forecast')
 
 const app = express();
 
+const port = process.env.PORT || 3000
 
 //Define paths for config
 const publicDirPath = path.join(__dirname ,'../public')
@@ -94,7 +95,7 @@ app.get('*',(req,res)=>{
         name:'dev'
     })
 })
-app.listen(3000,()=>{
-    console.log('sever is up on port 3000');
+app.listen(port,()=>{
+    console.log('sever is up on port '+port);
     
 })

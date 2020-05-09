@@ -3,7 +3,7 @@
 console.log('client side js is loded');
 
 async function getData (city){
-    const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+    const response = await fetch('/weather?city='+city);
     const data = await response.json();
     return data;
 }

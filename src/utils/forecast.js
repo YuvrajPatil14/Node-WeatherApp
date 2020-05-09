@@ -3,7 +3,7 @@ const request = require("request");
 const getData = (city , callback) => {
     console.log('called');
     
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=db4c0c387a00a6b869d3aa06ff79cc92&units=metric`;
+  const url = `https://api.openweathermap.org/da ta/2.5/weather?q=${city}&appid=db4c0c387a00a6b869d3aa06ff79cc92&units=metric`;
     if(!city )
     {
         return console.log('Provide arguments as city <space> country code');
